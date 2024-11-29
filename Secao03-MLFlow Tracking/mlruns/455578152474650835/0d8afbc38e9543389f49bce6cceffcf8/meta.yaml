@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao03-MLFlow%20Tracking/mlruns/455578152474650835/0d8afbc38e9543389f49bce6cceffcf8/artifacts
+end_time: 1732898364370
+entry_point_name: ''
+experiment_id: '455578152474650835'
+lifecycle_stage: active
+run_id: 0d8afbc38e9543389f49bce6cceffcf8
+run_name: debonair-smelt-359
+run_uuid: 0d8afbc38e9543389f49bce6cceffcf8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732898359527
+status: 3
+tags: []
+user_id: mateu

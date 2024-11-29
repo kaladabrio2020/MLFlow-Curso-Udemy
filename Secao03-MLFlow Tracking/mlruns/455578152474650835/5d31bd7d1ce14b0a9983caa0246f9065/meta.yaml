@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao03-MLFlow%20Tracking/mlruns/455578152474650835/5d31bd7d1ce14b0a9983caa0246f9065/artifacts
+end_time: 1732898272736
+entry_point_name: ''
+experiment_id: '455578152474650835'
+lifecycle_stage: active
+run_id: 5d31bd7d1ce14b0a9983caa0246f9065
+run_name: skittish-snipe-748
+run_uuid: 5d31bd7d1ce14b0a9983caa0246f9065
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732898267543
+status: 3
+tags: []
+user_id: mateu
