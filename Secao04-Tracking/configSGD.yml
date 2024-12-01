@@ -1,0 +1,9 @@
+parameters:
+    loss :  "squared_error"
+    penalty : "elasticnet"
+    alpha   : 1e-2
+    l1_ratio: 0.99
+    fit_intercept: False
+    max_iter: 500
+    tol     : 0.0001
+    shuffle : TRUE

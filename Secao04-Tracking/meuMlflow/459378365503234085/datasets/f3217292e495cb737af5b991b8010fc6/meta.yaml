@@ -1,0 +1,15 @@
+digest: 7eeb3abd
+name: dataset_train
+profile: '{"num_rows": 798, "num_elements": 10374}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Unnamed: 0", "required":
+  false}, {"type": "double", "name": "fixed acidity", "required": false}, {"type":
+  "double", "name": "volatile acidity", "required": false}, {"type": "double", "name":
+  "citric acid", "required": false}, {"type": "double", "name": "residual sugar",
+  "required": false}, {"type": "double", "name": "chlorides", "required": false},
+  {"type": "double", "name": "free sulfur dioxide", "required": false}, {"type": "double",
+  "name": "total sulfur dioxide", "required": false}, {"type": "double", "name": "density",
+  "required": false}, {"type": "double", "name": "pH", "required": false}, {"type":
+  "double", "name": "sulphates", "required": false}, {"type": "double", "name": "alcohol",
+  "required": false}, {"type": "double", "name": "quality", "required": false}]}'
+source: '{"uri": "dataset2_/train.csv"}'
+source_type: local

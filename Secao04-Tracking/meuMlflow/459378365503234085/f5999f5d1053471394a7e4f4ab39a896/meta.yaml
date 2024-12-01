@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao04-Tracking/meuMlflow/459378365503234085/f5999f5d1053471394a7e4f4ab39a896/artifacts
+end_time: 1733069025767
+entry_point_name: ''
+experiment_id: '459378365503234085'
+lifecycle_stage: active
+run_id: f5999f5d1053471394a7e4f4ab39a896
+run_name: burly-stoat-875
+run_uuid: f5999f5d1053471394a7e4f4ab39a896
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733069025703
+status: 4
+tags: []
+user_id: mateu

@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao04-Tracking/meuMlflow/459378365503234085/3b275d2cb22e46e2b63c4a4e2601554b/artifacts
+end_time: 1733069058475
+entry_point_name: ''
+experiment_id: '459378365503234085'
+lifecycle_stage: active
+run_id: 3b275d2cb22e46e2b63c4a4e2601554b
+run_name: agreeable-skunk-154
+run_uuid: 3b275d2cb22e46e2b63c4a4e2601554b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733069051415
+status: 4
+tags: []
+user_id: mateu
