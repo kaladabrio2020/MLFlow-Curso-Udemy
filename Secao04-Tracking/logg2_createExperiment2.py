@@ -3,6 +3,7 @@ import argparse
 import logging
 
 # --------
+import mlflow.exceptions
 import pandas as pd
 import numpy as np
 
@@ -87,9 +88,26 @@ if __name__ == "__main__":
     print("Uri :", mlflow.get_tracking_uri())
 
     # Definindo um nome do experimento
-    exp = mlflow.set_experiment(experiment_name="ExperimentRegElastic")
+    try:
+        exp_id = mlflow.create_experiment(
+        name="Elastic_",
+        tags=dict(version_= "1.0.0")
+        )
+    
+        get_ = mlflow.get_experiment(experiment_id=exp_id)
+    except mlflow.exceptions.MlflowException:
+        get_ = mlflow.set_experiment(experiment_name="Elastic_")
 
-    with mlflow.start_run(experiment_id=exp.experiment_id):
+    str_ = f"""
+Name..............: {get_.name}
+Id................: {get_.experiment_id}
+Tag...............: {get_.tags}
+LyfeCycle_Stage...: {get_.lifecycle_stage}
+Artifact Location : {get_.artifact_location}
+Timestamp Create..: {get_.creation_time}
+"""
+    print(str_)
+    with mlflow.start_run(experiment_id=get_.experiment_id):
         elastic = ElasticNet(
             alpha=alpha, l1_ratio=l1_ratio, random_state=32
         )

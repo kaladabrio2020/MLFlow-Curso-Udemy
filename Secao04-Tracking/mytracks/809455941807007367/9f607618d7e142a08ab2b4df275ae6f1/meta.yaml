@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao04-Tracking/mytracks/809455941807007367/9f607618d7e142a08ab2b4df275ae6f1/artifacts
+end_time: 1732998546700
+entry_point_name: ''
+experiment_id: '809455941807007367'
+lifecycle_stage: active
+run_id: 9f607618d7e142a08ab2b4df275ae6f1
+run_name: painted-dolphin-417
+run_uuid: 9f607618d7e142a08ab2b4df275ae6f1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732998541799
+status: 3
+tags: []
+user_id: mateu

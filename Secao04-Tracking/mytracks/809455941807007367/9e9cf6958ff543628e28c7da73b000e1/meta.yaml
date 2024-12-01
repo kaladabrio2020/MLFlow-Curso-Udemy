@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao04-Tracking/mytracks/809455941807007367/9e9cf6958ff543628e28c7da73b000e1/artifacts
+end_time: 1733066665451
+entry_point_name: ''
+experiment_id: '809455941807007367'
+lifecycle_stage: active
+run_id: 9e9cf6958ff543628e28c7da73b000e1
+run_name: stylish-squid-384
+run_uuid: 9e9cf6958ff543628e28c7da73b000e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733066659501
+status: 3
+tags: []
+user_id: mateu

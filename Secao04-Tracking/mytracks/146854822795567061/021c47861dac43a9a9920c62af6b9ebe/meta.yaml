@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao04-Tracking/mytracks/146854822795567061/021c47861dac43a9a9920c62af6b9ebe/artifacts
+end_time: 1732990061141
+entry_point_name: ''
+experiment_id: '146854822795567061'
+lifecycle_stage: active
+run_id: 021c47861dac43a9a9920c62af6b9ebe
+run_name: righteous-eel-93
+run_uuid: 021c47861dac43a9a9920c62af6b9ebe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732990055732
+status: 3
+tags: []
+user_id: mateu
