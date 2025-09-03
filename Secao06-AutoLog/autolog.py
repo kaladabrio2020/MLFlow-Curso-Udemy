@@ -10,6 +10,10 @@ import mlflow
 import mlflow.sklearn
 
 import omegaconf
+import pathlib
+
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+
 def print_(get_):
     return f"""
 Name..............: {get_.name}
@@ -23,7 +27,7 @@ Timestamp Create..: {get_.creation_time}
 def train_(X, y):
 
 
-    mlflow.set_tracking_uri('./meuMlflow')
+    mlflow.set_tracking_uri(BASE_DIR/'meuMlflow')
 
     try:
         exp = mlflow.create_experiment(name="SGDregressor")
@@ -40,14 +44,14 @@ def train_(X, y):
     xtrain, xtest, ytrain, ytest = train_test_split(X, y, random_state=32, test_size=0.75)
     
     # Salvando dados train e test
-    pd.concat([xtrain, ytrain]).to_csv("dataset2_/train.csv")
-    pd.concat([xtest, ytest]).to_csv("dataset2_/test.csv")
+    pd.concat([xtrain, ytrain]).to_csv(BASE_DIR / "dataset2_/train.csv")
+    pd.concat([xtest, ytest]).to_csv(BASE_DIR / "dataset2_/test.csv")
 
     # Pegando os hiperparametros do modelo
-    config = omegaconf.OmegaConf.load(file_="configSGD.yml")
+    config = omegaconf.OmegaConf.load(file_=BASE_DIR / "configSGD.yml")
 
     with mlflow.start_run(experiment_id=get_.experiment_id):
-        mlflow.autolog(
+        mlflow.sklearn.autolog(
             log_input_examples=True,
         )
         sgd_ = SGDRegressor(**config.parameters)
@@ -56,15 +60,16 @@ def train_(X, y):
 
         # registrando artefatos
         mlflow.log_artifacts(
-            local_dir="./dataset2_/"
+            "wine-quality.csv",
         )
        
    
 
 
 if __name__ == "__main__":
-    data = pd.read_csv("./dataset2_/wine-quality.csv", sep=';')
-
+    print(BASE_DIR)
+    data = pd.read_csv(BASE_DIR / "dataset2_/wine-quality.csv", sep=';')
+    data = data.dropna()
     X = data.drop(columns=["quality"])
     y = data["quality"]
 

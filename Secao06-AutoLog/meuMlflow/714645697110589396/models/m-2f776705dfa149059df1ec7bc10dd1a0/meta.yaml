@@ -1,0 +1,10 @@
+artifact_location: file:C:/Users/mateu/Documents/MEGA/Projetos-git/MLFlow-Curso-Udemy/Secao06-AutoLog/meuMlflow/714645697110589396/models/m-2f776705dfa149059df1ec7bc10dd1a0/artifacts
+creation_timestamp: 1756857864927
+experiment_id: '714645697110589396'
+last_updated_timestamp: 1756857880316
+model_id: m-2f776705dfa149059df1ec7bc10dd1a0
+model_type: null
+name: model
+source_run_id: ddda3a7a5b0e4d8f8a76d267e7a0e956
+status: 2
+status_message: null

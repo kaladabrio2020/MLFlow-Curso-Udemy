@@ -1,0 +1,28 @@
+artifact_path: file:C:/Users/mateu/Documents/Norton/Projetos GIT/MLFlow-Curso-Udemy/Secao07-Tracking
+  Server/mytracks/296020691507486032/models/m-ae79f85d04c64e3fbd39647d2a372e5a/artifacts
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.11.3
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.12.10
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-ae79f85d04c64e3fbd39647d2a372e5a
+model_size_bytes: 197336
+model_uuid: m-ae79f85d04c64e3fbd39647d2a372e5a
+prompts: null
+run_id: c27d60910dfd4046930ed7abb584a62f
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 8]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1,
+    1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-09-03 14:37:31.082587'

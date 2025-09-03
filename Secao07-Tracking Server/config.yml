@@ -1,0 +1,11 @@
+parameters:
+  learning_rate:  0.001
+  optimizer : "adam"
+  loss   :  "mse"
+  metrics: ["mse", "huber"]
+  epochs : 10
+  batch_size : 22
+  hidden_layers : [64, 32]
+  activation : "elu"
+  type_initializer_from_activation : "relu"
+  validation_split : 0.1

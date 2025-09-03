@@ -1,0 +1,11 @@
+artifact_location: file:C:/Users/mateu/Documents/Norton/Projetos GIT/MLFlow-Curso-Udemy/Secao07-Tracking
+  Server/mytracks/296020691507486032/models/m-dc21cdc7e3094a07b1c79042c8e1544f/artifacts
+creation_timestamp: 1756910135886
+experiment_id: '296020691507486032'
+last_updated_timestamp: 1756910161423
+model_id: m-dc21cdc7e3094a07b1c79042c8e1544f
+model_type: null
+name: model_keras
+source_run_id: 0d3125993465418ea2d847bf773270d0
+status: 2
+status_message: null

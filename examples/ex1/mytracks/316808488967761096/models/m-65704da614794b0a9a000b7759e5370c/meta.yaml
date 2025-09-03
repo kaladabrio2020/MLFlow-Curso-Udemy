@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/mateu/Documents/Norton/Projetos%20GIT/MLFlow-Curso-Udemy/examples/ex1/mytracks/316808488967761096/models/m-65704da614794b0a9a000b7759e5370c/artifacts
+creation_timestamp: 1756859526288
+experiment_id: '316808488967761096'
+last_updated_timestamp: 1756859532258
+model_id: m-65704da614794b0a9a000b7759e5370c
+model_type: null
+name: model_gradientBoss
+source_run_id: 5b6c679144fa48fdb63f73f179b39caa
+status: 2
+status_message: null
