@@ -91,3 +91,101 @@ Existem dois tipos servidores:
 		* Oferece uma interface simples e flexivel para acessar o servidor de rastreamento por http
 	2. RPC
 		*  Comunicação bidirecional, mais rapido
+	*
+Exemplo abaixo usando SQLlite como backend para salvar os dados
+	
+```bash
+mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mytracks --host 127.0.0.1
+```
+> `mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")`
+> **Remova depois de rodar o código o ` --default-artifact-root ./mytracks`**
+
+## Model Compenent
+
+É um formato padrão para para empacotar seu modelo de aprendizado de máquina em um formato reutilizável. 
+> Empacotados em uma formato adequado por exemplo pickle.
+
+
+* Model Signature: Especifica entrada e saida
+	* É uma forma de descrever os tipos de dados de entrada e saida e as formas esperadas e produzidas por um modelo de aprendizado de maquina.
+* Model API : Podemos gerar uma api com muita facilidade , e interagir com o model por meio de uma interface
+	* REST API : Flask, ou ferramentas python
+	* Poder fazer o deploy em diversos sistemas - cloud, on-premises servers, devices
+* Flavor : Uma variante refere-se a uma maneira especifica de serializar e armazenar um modelo de aprendizado de máquina.
+
+
+---
+
+# 📌 `mlflow.evaluate()`
+
+**Definição:**  
+A função `mlflow.evaluate()` permite **avaliar um modelo registrado no MLflow** usando um dataset de teste, calculando métricas automaticamente, gerando gráficos de desempenho e salvando artefatos de avaliação no MLflow Tracking.
+
+**Parâmetros principais:**
+
+- `model`: URI do modelo registrado no MLflow (`runs:/<run_id>/<artifact_path>`), objeto PyFunc, ou função custom de predição.
+    
+- `data`: DataFrame contendo **features + target**.
+    
+- `targets`: Nome da coluna de target no DataFrame.
+    
+- `model_type`: Tipo do modelo: `"classifier"` ou `"regressor"`.
+    
+- `evaluator_config` (opcional): Configurações extras, como lista de labels para classificação multiclass.
+    
+
+**Retorno:**  
+Um objeto `EvaluationResult` com métricas (`metrics`), artefatos (`artifacts`) e informações sobre o dataset.
+
+---
+
+## 🧪 Exemplo simples com classificação
+
+```python
+import mlflow
+import mlflow.sklearn
+from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+import pandas as pd
+
+# Dataset
+data = load_wine(as_frame=True)['data']
+target = load_wine(as_frame=True)['target']
+X = pd.concat([data, target.rename("target")], axis=1)
+
+train_df, test_df = train_test_split(X, test_size=0.25, random_state=42)
+X_train, y_train = train_df.drop(columns=["target"]), train_df["target"]
+
+with mlflow.start_run() as run:
+    # Treinar e logar modelo
+    model = LogisticRegression(max_iter=1000)
+    model.fit(X_train, y_train)
+    mlflow.sklearn.log_model(model, artifact_path="model")
+
+    # Obter URI do modelo logado
+    model_uri = f"runs:/{run.info.run_id}/model"
+
+    # Avaliar modelo
+    eval_result = mlflow.evaluate(
+        model=model_uri,
+        data=test_df,
+        targets="target",
+        model_type="classifier",
+        evaluator_config={"label_list": [0, 1, 2]}
+    )
+
+print(eval_result.metrics)
+```
+
+**✅ Saída esperada:**
+
+```python
+{'accuracy': 0.955, 'f1_score': 0.954, 'recall': 0.95}
+```
+
+---
+
+Se quiser, posso fazer **uma versão em Markdown ainda mais resumida**, tipo “quick reference” para usar `mlflow.evaluate()` em qualquer projeto de classificação ou regressão.
+
+Quer que eu faça?

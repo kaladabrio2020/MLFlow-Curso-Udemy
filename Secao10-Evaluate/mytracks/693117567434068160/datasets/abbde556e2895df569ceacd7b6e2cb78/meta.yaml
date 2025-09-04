@@ -1,0 +1,17 @@
+digest: 3e8d5426
+name: dataset
+profile: '{"num_rows": 45, "num_elements": 630}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "alcohol", "required": true},
+  {"type": "double", "name": "malic_acid", "required": true}, {"type": "double", "name":
+  "ash", "required": true}, {"type": "double", "name": "alcalinity_of_ash", "required":
+  true}, {"type": "double", "name": "magnesium", "required": true}, {"type": "double",
+  "name": "total_phenols", "required": true}, {"type": "double", "name": "flavanoids",
+  "required": true}, {"type": "double", "name": "nonflavanoid_phenols", "required":
+  true}, {"type": "double", "name": "proanthocyanins", "required": true}, {"type":
+  "double", "name": "color_intensity", "required": true}, {"type": "double", "name":
+  "hue", "required": true}, {"type": "double", "name": "od280/od315_of_diluted_wines",
+  "required": true}, {"type": "double", "name": "proline", "required": true}, {"type":
+  "long", "name": "target", "required": true}]}'
+source: '{"tags": {"mlflow.user": "mateu", "mlflow.source.name": "main.py", "mlflow.source.type":
+  "LOCAL", "mlflow.source.git.commit": "5e694fc361d4eb4f3621d18efa3670cc10edd83e"}}'
+source_type: code

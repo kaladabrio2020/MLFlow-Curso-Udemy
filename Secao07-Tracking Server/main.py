@@ -16,7 +16,7 @@ def train(X, y):
     params = OmegaConf.load("config.yml")
     params = params['parameters']
     # Criando esperimento
-    mlflow.set_tracking_uri(uri="./mytracks")
+    mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")
 
     try:
         exp = mlflow.create_experiment(

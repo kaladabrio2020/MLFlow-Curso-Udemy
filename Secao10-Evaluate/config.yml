@@ -1,0 +1,8 @@
+parameters:
+  penalty: "l1"
+  dual:  False
+  tol:  0.0001
+  fit_intercept:  False
+  intercept_scaling: 1
+  max_iter : 5000
+  solver: "saga"

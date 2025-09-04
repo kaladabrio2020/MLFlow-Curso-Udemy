@@ -1,0 +1,11 @@
+artifact_location: file:C:/Users/mateu/Documents/Norton/Projetos GIT/MLFlow-Curso-Udemy/Secao08-Model
+  Components/mytracks/928576216928126223/models/m-e77f38bb951f41c6a1cba41a0ce2ddf2/artifacts
+creation_timestamp: 1756995627881
+experiment_id: '928576216928126223'
+last_updated_timestamp: 1756995633524
+model_id: m-e77f38bb951f41c6a1cba41a0ce2ddf2
+model_type: null
+name: model_logistic_regression
+source_run_id: 9d0f70799665455b8d81e1a64ac152f8
+status: 2
+status_message: null
